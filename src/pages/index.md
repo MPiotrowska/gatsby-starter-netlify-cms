@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Temple Café
 image: /img/home-jumbotron.jpg
 heading: Temple Café
 subheading: Support sustainable farming while enjoying a cup
