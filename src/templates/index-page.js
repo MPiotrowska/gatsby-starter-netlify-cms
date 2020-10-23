@@ -5,7 +5,9 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import {Button} from '../components/Button/Button'
 import "../styles/index-page.scss"
+
 
 export const IndexPageTemplate = ({
   image,
@@ -61,6 +63,8 @@ export const IndexPageTemplate = ({
         >
           {subheading}
         </h3>
+
+       <Button href="/contact" text="Contact"/>
       </div>
     </div>
     <section className="section section--gradient">
