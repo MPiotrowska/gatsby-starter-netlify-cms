@@ -1,9 +1,10 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Temple Café
 image: /img/home-jumbotron.jpg
 heading: Temple Café
-subheading: Support sustainable farming while enjoying a cup
+subheading: 815 London Rd, Southend-on-Sea, 
+optionalText: Westcliff-on-Sea SS0 9SY
 mainpitch:
   title: Why Kaldi
   description: >

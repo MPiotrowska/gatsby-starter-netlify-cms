@@ -5,12 +5,16 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import {Button} from '../components/Button/Button'
+import "../styles/index-page.scss"
+
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
   subheading,
+  optionalText,
   mainpitch,
   description,
   intro,
@@ -37,14 +41,12 @@ export const IndexPageTemplate = ({
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-unique-background "
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            // boxShadow:
+            //   'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            // // backgroundColor: 'rgb(255, 68, 0)',
+           
           }}
         >
           {title}
@@ -52,16 +54,33 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
+            // boxShadow:
+            //   'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            // backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
+            textAlign: 'center',
           }}
         >
           {subheading}
         </h3>
+        <h3
+          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          style={{
+            // boxShadow:
+            //   'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            // backgroundColor: 'rgb(255, 68, 0)',
+            color: 'white',
+            lineHeight: '1',
+            padding: '0.25em',
+            textAlign: 'center',
+          }}
+        >
+          {optionalText}
+        </h3>
+
+       <Button href="/contact" text="Contact"/>
       </div>
     </div>
     <section className="section section--gradient">
@@ -119,6 +138,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  optionalText: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -136,6 +156,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        optionalText={frontmatter.optionalText}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -168,6 +189,7 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        optionalText
         mainpitch {
           title
           description

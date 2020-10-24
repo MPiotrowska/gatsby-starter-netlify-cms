@@ -1,15 +1,21 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from "react";
+import { Link } from "gatsby";
+
+import instagram from "../../img/social/instagram.svg"
+
+import facebook from "../../img/social/facebook.svg";
+import '../../components/Navbar/navbar.scss'
+// import "../styles/index-page.scss"
+
+import { SocialLink } from "../../components/SocialLink";
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-    }
+      navBarActiveClass: "",
+    };
   }
 
   toggleHamburger = () => {
@@ -23,14 +29,14 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
-            })
+              navBarActiveClass: "",
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -41,11 +47,11 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <h1>The Temple Café</h1>
-            {/* <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link> */}
-            {/* Hamburger menu */}
+            <Link to="/" className="navbar-item" title="Logo">
+              {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
+              <span>Temple Café</span>
+            </Link>
+            {/* Hamburger menu  */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
@@ -78,22 +84,26 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+              <SocialLink
+                href="https://www.instagram.com/temple_cafe_chalkwell/"
+                src={instagram}
+                alt="Instagram"
+                className="inverse"
+                style={{ width: "1.5em", height: "1.5em" }}
+              />
+              <SocialLink
+                href="https://www.facebook.com/templecafechalkwellpark/"
+                src={facebook}
+                alt="Facebook"
+                className="inverse"
+                style={{ width: "1.5em", height: "1.5em" }}
+              />
             </div>
           </div>
         </div>
       </nav>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;
