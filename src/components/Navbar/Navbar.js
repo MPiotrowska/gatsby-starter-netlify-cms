@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import instagram from "../img/social/instagram.svg";
-import facebook from "../img/social/facebook.svg";
-import '../styles/navbar.scss'
-import "../styles/index-page.scss"
 
-import { SocialLink } from "../components/SocialLink";
+import instagram from "../../img/social/instagram.svg"
+
+import facebook from "../../img/social/facebook.svg";
+import '../../components/Navbar/navbar.scss'
+// import "../styles/index-page.scss"
+
+import { SocialLink } from "../../components/SocialLink";
 
 const Navbar = class extends React.Component {
   constructor(props) {
