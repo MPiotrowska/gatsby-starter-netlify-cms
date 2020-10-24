@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
-  subheading1,
+  optionalText,
   mainpitch,
   description,
   intro,
@@ -77,7 +77,7 @@ export const IndexPageTemplate = ({
             textAlign: 'center',
           }}
         >
-          {subheading1}
+          {optionalText}
         </h3>
 
        <Button href="/contact" text="Contact"/>
@@ -138,7 +138,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  subheading1: PropTypes.string,
+  optionalText: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -156,7 +156,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        subheading1={frontmatter.subheading1}
+        optionalText={frontmatter.optionalText}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -189,7 +189,7 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        subheading1
+        optionalText
         mainpitch {
           title
           description
