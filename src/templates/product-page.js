@@ -41,7 +41,7 @@ export const ProductPageTemplate = ({
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="card column is-7 is-offset-1">
+            <div className="column is-7 is-offset-1">
               <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
               <p>{description}</p>
             </div>
@@ -52,6 +52,7 @@ export const ProductPageTemplate = ({
                 heading={main.heading}
                 description={main.description}
                 gridItems={intro.blurbs}
+
               />
               <div className="tile is-ancestor">
                 <div className="tile is-vertical">
@@ -124,6 +125,8 @@ ProductPageTemplate.propTypes = {
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+
+  console.log(frontmatter)
 
   return (
     <Layout>

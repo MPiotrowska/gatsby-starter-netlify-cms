@@ -4,6 +4,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import './Cards/Cards.css'
 
 const FeatureGrid = ({ gridItems }) => {
+  console.log(gridItems)
   return (
     <div className="columns is-multiline">
       {gridItems.map((item) => (
@@ -18,8 +19,10 @@ const FeatureGrid = ({ gridItems }) => {
               >
                 <PreviewCompatibleImage imageInfo={item} />
               </div>
+              <div><h3>{item.heading}</h3></div>
             </div>
-            <p>{item.text}</p>
+              <p>{item.text}</p>
+              
           </section>
         </div>
       ))}
@@ -32,6 +35,7 @@ FeatureGrid.propTypes = {
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       text: PropTypes.string,
+      heading:PropTypes.string,
     })
   ),
 }
