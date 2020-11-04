@@ -11,18 +11,15 @@ description: >-
 intro:
   blurbs:
     - image: /img/coffee.png
-    - heading: Bespoke Heading
       text: >
         If you’re looking for a finger buffet menu then we can provide you with beautifully presented, fresh and first class, quality food platters. Take a look at our sample menus below. They are ideal for smaller gatherings either at work or home or we can cater for larger groups and work with your venue to create your perfect event.
     - image: /img/coffee-gear.png
-    - heading: Bespoke Heading
       text: >
         We offer a small, but carefully curated selection of brewing gear and
         tools for every taste and experience level. No matter if you roast your
         own beans or just bought your first french press, you’ll find a gadget
         to fall in love with in our shop.
     - image: /img/tutorials.png
-    - heading: Bespoke Heading
       text: >
         Love a great cup of coffee, but never knew how to make one? Bought a
         fancy new Chemex but have no clue how to use it? Don't worry, we’re here
@@ -30,7 +27,6 @@ intro:
         to learn anything you want to know about coffee roasting and brewing.
         Email us or call the store for details.
     - image: /img/meeting-space.png
-    - heading: Bespoke Heading
       text: >
         We believe that good coffee has the power to bring people together.
         That’s why we decided to turn a corner of our shop into a cozy meeting
